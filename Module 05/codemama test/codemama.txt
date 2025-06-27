@@ -1,0 +1,27 @@
+#1
+// function main(input){
+//     // let [h,b] = input.trim().split(" ").map(Number);
+//     const toArray = input.trim().split(" ");
+//     const h = parseInt(toArray[0]);
+//     const b = parseInt(toArray[1]);
+//     // console.log(toArray)
+//     console.log(Math.floor((1/2)*h*b))
+// }
+
+
+
+// main(" 85 49    ")
+
+
+#2
+function main(input){
+    let numbers = input.trim().split(" ").map(Number);
+    console.log(Math.min(...numbers))
+}
+
+#3
+function main(input){
+    let r = parseInt(input.trim())
+    let result = (3.14*(r*r)).toFixed(2);
+    console.log(`The area of the circle is ${result} square units.`)
+}
