@@ -1,0 +1,84 @@
+function main(input) {
+  const reversed = input.split('').reverse().join('');
+  if (input === reversed) {
+    console.log(`${input} is a palindrome number`);
+  } else {
+    console.log(`${input} is not a palindrome number`);
+  }
+}
+
+main("12122999");  
+
+
+
+
+
+function main(number) {
+  let factorial = 1;
+
+  if (number === 0 || number === 1) {
+      console.log('1');
+  }
+
+  for (let i = 2; i <= number; i++) {
+      // factorial *= i;
+      factorial = factorial * i;
+  }
+
+  console.log(factorial);
+}
+
+
+main("4")
+
+
+
+
+
+
+
+function main(number) {
+
+    let orginal = number.split('').reverse().join('');
+    console.log(parseInt(orginal))
+  
+}
+
+main("4567")
+
+
+
+
+
+
+
+
+
+function main(input){
+  
+  let lines = input.split('\n');
+  let size = lines[0];
+  let elements = lines[1].split(' ').map(Number).sort((a,b)=>a-b);
+  let median = Math.floor(size/2);
+  let sum = 0;
+
+ 
+
+  if(median==1){
+    console.log('0');
+  }else{
+    for(i=0;i<median;i++){
+    
+
+      sum += elements[i];
+      
+    }
+    console.log(sum);
+  }
+
+}
+main("5\n3 1 8 6 4");
+
+
+
+

@@ -1,0 +1,49 @@
+db.workers.aggregate([])
+
+
+db.workers.aggregate([{$count : 'total'}])
+db.workers.find({}).count('total')
+db.workers.find({}).sort({salary: 1})
+
+db.workers.aggregate([{$sort: {salary: 1}}])
+
+
+db.workers.aggregate([{$limit: 3}])
+db.workers.find({}).limit(3)
+
+db.workers.aggregate([{$match: {name: "Michael Johnson"}}])
+db.workers.aggregate([{$match: {salary: 90000, age: 42}}])
+
+db.workers.aggregate([{$match: {salary: 90000}},{$match: {tax: 18000}}])
+
+db.workers.aggregate([{$match: {$and: [{salary:90000},{tax: 18000}]}}])
+db.workers.aggregate([{$match: {$or: [{salary:75000},{tax: 18000}]}}])
+
+db.workers.aggregate([{$match: {name: /Johnson/}}])
+db.workers.aggregate([{$match: {salary: {$in:[75000,90000]}}}])
+
+db.workers.find({salary: {$in:[90000,75000]}})
+
+
+db.workers.aggregate([{$project:{_id:0,name:1,age:1}}])
+db.workers.find({},{_id:0,name:1})
+db.workers.aggregate([{$match:{salary:90000}}, {$project:{_id:0,name:1}}])
+
+
+db.workers.aggregate([{$skip:1},{$limit: 3}])
+db.workers.find({}).skip(1).limit(3)
+
+db.workers.aggregate([{$group: {_id: "$salary"}}])
+
+db.workers.aggregate([{$group: {_id: "$salary", totalSalary: {$sum: "$salary"}}}])
+
+db.workers.aggregate([{$group: {_id: "$salary", totalSalary: {$sum: "$salary"}}}])
+
+
+db.employees.aggregate([
+    {$group: 
+        // {_id: "$salary", total: {$sum: '$salary'}}
+        // {_id: "$salary", avgTotal: {$avg: '$salary'}}
+        {_id: "$salary", maxTotal: {$max: '$salary'}}
+    }
+])

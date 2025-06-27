@@ -1,0 +1,141 @@
+1. Answer: 
+
+=============================
+
+The db.hostInfo() method in mongodB tell about the host where the mongodb server is running like what kind of computer, what operating system using, and other things.
+
+Example: db.hostInfo()
+
+
+
+2. Answer: 
+
+=============================
+
+Not possible, because using db.getName() just give the name of the database currently using2r
+
+
+
+3. Answer: 
+
+=============================
+
+A string....
+
+
+
+4. Answer: 
+
+=============================
+
+
+
+In mongodb , I can call this method on the current database context in the mongodb shell. 
+
+Example:
+
+-----------------
+
+db.dropDatabase()
+
+
+
+
+
+5. Answer: 
+
+=============================
+
+A list of collection names and the data type of this result is an array of strings.
+
+
+
+6. Answer: 
+
+=============================
+
+db.getCollectionNames()
+
+The method of mongodb is used to obtain a list of collection names in the current database.
+
+
+
+7. Answer: 
+
+=============================
+
+I can retrieve server statistics and information in mongodb using the db.serverStatus() method.
+
+Example: db.serverStatus()
+
+
+
+8. Answer: 
+
+=============================
+
+The method used to retrieve the version of mongodb is like below:
+
+Example: db.version()
+
+
+
+9. Answer: 
+
+=============================
+
+The method used to delete a collection from the database is like below:
+
+db.collection.drop()
+
+Example: db.employees.drop()
+
+
+
+10. Answer: 
+
+=============================
+
+I can add single document using be like:
+
+Example: 
+
+db.names.insertOne({
+
+    name: "Mehedi Hasan",
+
+    age: 22,
+
+    city: "Dhaka"
+
+})
+
+
+
+
+
+11. Answer: 
+
+=============================
+
+The method in mongodb is used to query and retrieve documents from a collection based on specified criteria or conditions
+
+Example: db.mynames.find({})
+
+
+
+
+
+12. Answer: 
+
+=============================
+
+$regex is a mongo operator used for pattern matching within queries. 
+
+I can use it to find documents where a field matches a regular expression pattern.
+
+
+
+Example: 
+
+db.collectionName.find({ name: { $regex: "im" } })

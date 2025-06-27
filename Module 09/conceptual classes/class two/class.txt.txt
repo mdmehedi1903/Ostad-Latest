@@ -1,0 +1,79 @@
+-> <-
+Up and down arrow will hold history of built-in funciton
+
+use('databasename') //Switch database
+db.getName() //Name pabo
+
+db.dropDatabase()
+//drop kore dibe
+
+db.getCollectionInfos()
+//to get info
+
+db.getCollectionNames()
+//to get all collection names
+
+db.getCollectionNames()
+//to get db
+
+
+db.logout()
+
+
+db.serverBuildInfo()
+//to get server build info
+
+db.version()
+
+
+db.createCollection('New Collection')\
+db.createCollection('dataLearning')
+
+// db.dropCollection()
+db.NewCollection.drop()
+
+db.dataLearning.insertOne({name:"Emam Mehedi",roll:20,class:"Hons 2nd Year"})
+
+
+
+db.users.findOne({name:"Emam Mehedi"})
+//always find first one if find dupplicate data
+
+db.users.findOne({roll:55})
+
+
+//projections
+db.users.find({},{_id:0,name:1})
+
+db.ponno.find({price: {$eq: 2500}})
+db.ponno.find({price: {$lte: 4000}})
+db.ponno.find({price: {$gt: 2500}})
+db.ponno.find({price: {$gte: 2500}})
+db.ponno.find({price: {$ne: 2500}})
+
+
+db.ponno.find({ price: { $in: [4200, 2500] } })
+db.ponno.find({ price: { $nin: [4200, 2500] } })
+
+
+db.collectionName.find({ price: { $exists: true } })
+
+
+db.ponno.find({ name: { $regex: "M" } })
+
+db.products.find({}).sort({ price: 1 })
+db.products.find({}).sort({ price: -1 })
+
+
+db.products.find({}).sort({ price: 1 })
+
+db.products.find({}).sort({ price: 1 }).limit(2)
+
+db.ponno.deleteOne({ name: "TV" })
+
+
+
+db.ponno.deleteMany({price: {$lte: 4000}})
+
+
+
