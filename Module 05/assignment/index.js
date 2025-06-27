@@ -12,7 +12,7 @@ http.createServer((req,res)=> {
             }else if(req.url =="/contact"){
                 data = fs.readFileSync("contact.html", "utf8")
             }else if(req.url =="/file-write"){
-                fs.writeFile("demo.txt", "hello world",(err)=> {
+                fs.writeFile("demo.txt", "hello world new",(err)=> {
                     if(err){
                         console.log("Failed!")
                     }else{
