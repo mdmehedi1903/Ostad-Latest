@@ -1,0 +1,57 @@
+
+
+
+<script>
+
+    var discount = 0;
+    var purchaseAmount = prompt("Enter purchase value!");
+
+function myDisocunt(){
+    if(purchaseAmount > 200){
+        return discount = 0.15;
+    }else if (100 <purchaseAmount && 200>=purchaseAmount){
+        return discount = 0.10;
+    }else if (50<=purchaseAmount && 101>purchaseAmount){
+        return discount = 0.05;
+    }
+    else {
+        return discount = 0;
+    }
+
+
+
+// switch(true){
+
+//     case(purchaseAmount < 50):
+//     document.write("No discount applied!")
+//     return discount = 0;
+//     break;
+
+//     case(purchaseAmount>=50 && 100>purchaseAmount):
+//     document.write("You got 5% discount!")
+//     return discount = 0.05;
+//     break;
+
+//     case(purchaseAmount>=100 && 200>=purchaseAmount):
+//     return discount = 0.10;
+//     break;
+
+//     default: 
+//     return discount = 0.15;
+// }
+
+
+
+}
+
+
+myDisocunt()
+
+document.write(`<h1>Purchase Value: ${purchaseAmount} TK<h1>`);
+document.write(`<h1>You got ${purchaseAmount*discount} TK less!<h1>`);
+document.write(`<h1>Current Value ${purchaseAmount-(purchaseAmount*discount)} TK!<h1>`);
+document.write(`<h1>You got ${discount*100} % discount!<h1>`);
+
+
+
+</script>
