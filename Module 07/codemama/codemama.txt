@@ -1,0 +1,60 @@
+function main(input){
+    let vowel = "aAiIOoUuEe";
+    if(vowel.includes(input)){
+        console.log(`The string contains a vowel.`)
+    }else{
+        console.log(`The string does not contain any vowel.`)
+    }
+}
+
+
+
+main('bbd')
+
+
+
+
+
+
+function main(input){
+    let [a,b,c] = input.trim().split(" ").map(Number);
+    diff1 = b-a;
+    diff2 = c-b;
+
+    if(diff1==diff2){
+        let result = c + diff1;
+        console.log(result)
+    }
+}
+
+
+main("3 5 7");
+
+
+
+
+
+
+
+
+function main(input){
+  let [height, weight] = input.split(' ').map(Number);
+  let bmi = weight/(height*height);
+  let result = Number(bmi.toFixed(2));
+  
+  console.log('BMI: '+result);
+  if(result < 18.5){
+    
+    console.log('Underweight');
+  }else if(result >= 18.5 && result < 25.0){
+    console.log('Normal weight');
+  }
+  else if(result >= 25.0 && bmi < 30.0){
+    console.log('Overweight');
+  }else{
+    console.log('Obese');    
+  }
+
+}
+
+main("1.7272 62")
