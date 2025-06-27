@@ -1,0 +1,92 @@
+<script>
+
+
+// IIF
+
+(() => {
+    document.write("I am IIFE function");
+  })();
+// IIF Function signature
+
+(function() {
+    document.write("I am IIFE function");
+  })();
+
+// regular 
+document.write("</br>")
+
+function regularFun () {
+    document.write("Regular function!")
+    document.write("</br>")
+}
+
+
+
+// arrow function 
+
+arrowFun=()=> {
+    document.write("Arrow function!")
+    document.write("</br>")
+}
+
+
+
+regularFun()
+arrowFun()
+
+
+
+// async await
+asyncAwait1 = async ()=> {
+     await ('https://jsonplaceholder.typicode.com/posts');
+}
+
+
+asyncAwait2 = async ()=> {
+    await fetch('https://dummyjson.com/products/1');
+   
+}
+
+
+asyncAwait1();
+asyncAwait2();
+
+
+// rest parameter
+
+function restPara(...abc) {
+    document.write("</br>")
+    document.write(abc);
+}
+
+
+
+restPara(1,2,3,4,5)
+
+
+// extra parameter
+
+function extraPara() {
+    let abc = [1,2,4,5,46,7,8,67,8]
+    document.write("</br>")
+    document.write(abc);
+    document.write("</br>")
+    document.write(...abc);
+}
+
+
+extraPara()
+
+
+
+
+// dynamic function
+let myDynamic= function(holdPara){
+    return holdPara;
+}
+
+console.log(myDynamic("Emam Mehedi"))
+
+
+
+</script>

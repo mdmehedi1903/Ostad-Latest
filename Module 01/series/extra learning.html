@@ -1,0 +1,68 @@
+
+
+
+<script>
+   // Function return
+var numArray = [32, 34, 54, 44, 5, 34, 34 ,6, 7,78];
+document.write('<h1>Return by arrow function with curly braces: </h1>')
+ document.write(numArray.sort((x,y)=>{
+    return x-y;
+}))
+
+document.write('<h1>Return by arrow function without return text and curly braces: </h1>')
+ document.write(numArray.sort((x,y)=> x-y))
+
+document.write('<h1>Return by regular function with return curly braces etc </h1>')
+ document.write(numArray.sort(function(x,y){
+    return x-y;
+ }))
+
+
+
+
+
+
+
+// JS class
+
+var getTarikh = new Date();
+console.log(getTarikh)
+
+console.log(Object.getOwnPropertyNames(Math));
+// console.log(Math()+'</br>')
+
+
+
+
+
+
+// how to create call back function
+
+
+function sample(a,b, cb){
+    var c = a + b; //c = 13
+    var d = a - b; //d = -3
+    
+    var result = cb(c,d);
+    return result;
+
+}
+
+
+function sum(a,b){
+    return a+b;
+}
+
+var result = sample(5,8, sum);
+ console.log(result);
+
+
+
+
+
+
+
+
+
+</script>
+
