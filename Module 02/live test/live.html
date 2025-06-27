@@ -1,0 +1,60 @@
+
+    <button onclick="openNewTab('https://wpsmarket.com/bn')"> Open New Tab</button>
+
+    <button onclick="closeCurrentTab()"> Close Tab
+    </button>
+    <button onclick="changeText()"> Change
+    </button>
+    <button onclick="changeColor('background-color')"> Change
+    </button>
+    <button onclick="toggleClass()"> Toggle Class
+    </button>
+    <button onclick="showAlert()"> Show Alert
+    </button>
+
+
+    
+
+<style>
+    .background-color {
+        background-color: brown;
+    }
+
+
+    .d-none {
+        display: none;
+    }
+</style>
+
+    
+<h1 id="headingTag">THis is Heading Tag </h1>
+<h1 id="toogleTesting">This is toggle testing! </h1>
+    <script>
+        function openNewTab(url){
+            window.open(url, '_blank')
+        }
+        function closeCurrentTab(){
+            window.close()
+        }
+
+        function changeText(){
+            document.getElementById('headingTag').innerHTML="My Next Text";
+        }
+
+        function changeColor(bgColor){
+                document.querySelector('h1').classList.add(bgColor)
+        }
+
+
+        function toggleClass() {
+            document.getElementById('toogleTesting').classList.toggle('d-none')
+        }
+
+        function showAlert(){
+            window.alert("How are you?")
+        }
+
+        document.write(window.location.href+"</br>")
+        document.write(window.domain+"</br>")
+        document.write(document.URL)
+    </script>

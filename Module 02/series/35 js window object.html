@@ -1,0 +1,47 @@
+
+<button onClick="myPromt()"> myPromt </button>
+<button onClick="myAlert()"> myAlert </button>
+<button onClick="timeOut()"> timeOut after 10 sec </button>
+<button onClick="myConfirm()"> myConfirm </button>
+<button onClick="myOpen()"> myOpen </button>
+<button onClick="myClose()"> myClose </button>
+
+
+<script>
+
+
+    function myPromt(){
+        let result = prompt("How are you?")
+        document.write(result);
+    }
+    function myAlert(){
+        alert("Enter a value!")
+    }
+    function myConfirm(){
+        
+        let result = confirm("are u agree")
+        document.write(result);
+    }
+    function myOpen(){
+        
+        open()
+    }
+
+    function myClose(){
+        
+        close()
+    }
+
+
+
+
+
+   function timeOut(){
+    setTimeout(function(){
+        alert("How are you?")
+    }, 10000);
+   }
+
+
+
+</script>

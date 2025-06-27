@@ -1,0 +1,32 @@
+<video width="300" autoplay height="300" id="vid">
+</video>
+
+<script>
+
+
+    let myCurrentURL = document.URL;
+    let myCurrentURL1 = window.location.href;
+    document.write(myCurrentURL +'</br>'+ myCurrentURL1)
+
+
+    navigator.mediaDevices.getUserMedia({
+        audio: true,
+        video: {
+            facingMode: "environment"
+        }
+    }).then(videoStream => {
+        let videoUrl = document.getElementById('vid');
+        videoUrl.srcObject = videoStream;
+    })
+
+
+    // navigator.geolocation.getCurrentPosition(function(position){
+    //     let lat = position.coords.latitude;
+    //     let long = position.coords.longitude;
+
+    //     document.write("Lat: " + lat +'</br>')
+    //     document.write("Long: " + long +'</br>')
+
+    // })
+
+</script>

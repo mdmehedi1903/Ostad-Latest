@@ -1,0 +1,43 @@
+
+
+
+<h1 class="myClass">Hi How are you?</h1>
+<h6 id="myId">Hi How are you?</h6>
+<p name="myName">My para</p>
+<h4>My Heading Four</h4>
+
+
+<script>
+
+    document.querySelector('h1.myClass').innerHTML="Manipulated";
+    document.querySelector('p[name=myName]').innerHTML="Manipulated"
+    document.querySelector('#myId').innerHTML="Manipulated"
+    document.querySelector('h4').innerHTML="Manipulated"
+
+    </script>
+
+
+
+
+<button>Click DD </button>
+<button>Click Me </button>
+<button>Click Me </button>
+<button>Click Me </button>
+<button>Click Me </button>
+<button>Click SS </button>
+<button>Click Me </button>
+<script>
+    let myAllbtn = document.querySelectorAll('button');
+    myAllbtn.forEach(button=> {
+        button.innerHTML = "All Changed!"
+    })
+    document.querySelector('button').innerHTML = "First one changed!";
+    
+    myAllbtn[5].style.backgroundColor = "Green";
+    myAllbtn[5].style.color = "white";
+</script>
+
+
+
+
+

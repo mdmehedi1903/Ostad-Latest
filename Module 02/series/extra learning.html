@@ -1,0 +1,16 @@
+<button>Click Me </button>
+<h1>Heading One </h1>
+<script>
+    let myAllbtn = document.querySelector('button');
+    let myHeading = document.querySelector('h1');
+    myAllbtn.addEventListener("click", (e)=> {
+        myHeading.innerHTML = "Button is clicked!";
+        console.log(e)
+    })
+    myAllbtn.addEventListener("mouseover", ()=> {
+        myHeading.innerHTML = "Button is Hovered!";
+    })
+    myAllbtn.addEventListener("mouseout", ()=> {
+        myHeading.innerHTML = "Button is Out!";
+    })
+</script>

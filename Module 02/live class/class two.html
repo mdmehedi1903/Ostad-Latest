@@ -1,0 +1,58 @@
+<button onclick="asyncRequest()">Async Ajax Request </button>
+<button onclick="requestusingPromises()">Request using Promises </button>
+<button onclick="axiosRequest()">Request using Async Axios </button>
+<button onclick="promisesAxios()">Request using Promises Axios </button>
+<button onclick="simplePromisesAxios()">Simple Promises Axios => limit .(Dot) then .then() </button>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios@1.8.4/dist/axios.min.js"></script>
+<script>
+let siteURL = "https://crud.teamrabbil.com/api/v1/ReadProduct";
+// async await ajax request
+async function asyncRequest(){
+    let myData = await fetch(siteURL);
+    let toJson = await myData.json();
+    document.write(JSON.stringify(toJson))
+}
+
+
+// promises ajax request
+
+
+            function requestusingPromises(){
+                fetch(siteURL)
+                .then(res=>res.json())
+                .then(writeData=>document.write(JSON.stringify(writeData)))
+                .catch(err=>console.log(err))
+            }
+
+
+            
+// axios request
+
+async function axiosRequest(){
+    let res = await axios.get(siteURL)
+    let jsonData = res.data;
+    document.write(JSON.stringify(jsonData))
+}
+
+// promises axios request
+function promisesAxios(){
+    axios.get(siteURL)
+    .then(res=>res.data)
+    .then(jsonData=>document.write(JSON.stringify(jsonData)))
+    .catch(err=>console.log(err))
+}
+
+// simple promises axios request: only one then
+function simplePromisesAxios(){
+    axios.get(siteURL).then((res)=> {
+        let jsonData = res.data;
+        document.write(JSON.stringify(jsonData))
+    })
+}
+
+
+// Git New Branch Practice
+
+</script> 

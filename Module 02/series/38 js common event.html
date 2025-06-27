@@ -1,0 +1,62 @@
+<button onclick="myChange('onclick')">onclick</button>
+<button onmouseout="myChange('onmouseout')">onmouseout</button>
+<button onmouseover="myChange('onmouseover')">onmouseover</button>
+<input placeholder="onchange" onchange="myChange('onchange')"/>
+<input placeholder="onkeydown" onkeydown="myChange('onkeydown')"/>
+<input placeholder="onkeyup" onkeyup="myChange('onkeyup')"/>
+<h2></h2>
+<script>
+   function myChange(changeDone){
+       document.getElementsByTagName('h2')[0].innerHTML = changeDone;
+       console.log(changeDone)
+   }
+</script> 
+
+
+
+
+<button class="button">Click Me </button>
+<h1>Heading One </h1>
+<script>
+    let myAllbtn = document.querySelector('.button');
+    let myHeading = document.querySelector('h1');
+    myAllbtn.addEventListener("click", (e)=> {
+        myHeading.innerHTML = "Button is clicked!";
+        console.log(e)
+    })
+    myAllbtn.addEventListener("mouseover", ()=> {
+        myHeading.innerHTML = "Button is Hovered!";
+    })
+    myAllbtn.addEventListener("mouseout", ()=> {
+        myHeading.innerHTML = "Button is Out!";
+    })
+</script>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<button onclick="myFun('Button is clicked')"> Button </button>
+<button onmouseout="myOut('Mouse is Out')"> Button </button>
+<button onmouseover="myOver('Mouse is Over')"> Button </button>
+<script>
+    function myFun(myResult) {
+        console.log(myResult)
+    }
+    function myOut(myResult) {
+        console.log(myResult)
+    }
+    function myOver(myResult) {
+        console.log(myResult)
+    }
+</script>
+
+
+
+
+</html> -->

@@ -1,0 +1,48 @@
+<script>
+
+
+let myNavigate = [
+  "navigator.appCodeName",
+  "navigator.appName",
+  "navigator.appVersion",
+  "navigator.cookieEnabled",
+  "navigator.language",
+  "navigator.userAgent",
+  "navigator.platform",
+  "navigator.onLine"
+];
+
+for(i=0;i<myNavigate.length;i++){
+    document.write(myNavigate[i].replace("navigator.", " ")+'========> '+eval(myNavigate[i])+'</br>')
+}
+
+
+
+    // let appCodeName = navigator.appCodeName;
+    // var appName = navigator.appName;
+    // var appVersion = navigator.appVersion;
+    // var cookieEnabled = navigator.cookieEnabled;
+    // var language = navigator.language;
+    // var userAgent = navigator.userAgent;
+    // var platform = navigator.platform;
+    // var isOnline = navigator.onLine;
+
+
+
+    // document.write(
+    //     'isOnline:=====>'+isOnline+'</br>'+
+    //     'appCodeName:=====>'+appCodeName+'</br>'+
+    //     'appName:=====>'+appName+'</br>'+
+    //     'appVersion:=====>'+appVersion+'</br>'+
+    //     'language:=====>'+language+'</br>'+
+    //     'cookieEnabled:=====>'+cookieEnabled+'</br>'+   
+    //     'userAgent:=====>'+userAgent+'</br>'+    
+    //     'platform:=====>'+platform
+    // );
+
+
+ 
+
+    
+
+</script>

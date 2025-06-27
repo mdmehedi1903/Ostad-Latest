@@ -1,0 +1,18 @@
+<h1 id="myHeading">0</h1>
+<button onclick="myFun()">Click Me</button>
+<button onclick="resetFun()">Reset</button>
+
+<script>
+    let count = 0;
+    const holdDiv = document.getElementById('myHeading');
+
+    function myFun() {
+        count++;
+        holdDiv.innerHTML = count;
+    }
+
+    function resetFun() {
+        count = 0;
+        holdDiv.innerHTML = count;
+    }
+</script>

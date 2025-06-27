@@ -1,0 +1,14 @@
+<button onclick="getRequest()">Click Me </button>
+<script>
+    function getRequest(){
+        var URL = "https://crud.teamrabbil.com/api/v1/ReadProduct";
+        var configurationName = {method: "GET"}
+
+
+        fetch(URL, configurationName)
+        .then(respponse => respponse.json())
+        .then(result=>console.log(result)
+        .catch(err=>console.log(err)))
+
+    }
+</script>

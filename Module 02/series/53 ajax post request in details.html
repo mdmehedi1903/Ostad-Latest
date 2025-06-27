@@ -1,0 +1,32 @@
+<button onclick="getRequest()">Click Me </button>
+<script>
+    function getRequest(){
+        // var URL = "https://crud.teamrabbil.com/api/v1/ReadProduct";
+        // var configurationName = {method: "GET"}
+
+
+        // fetch(URL, configurationName)
+        // .then(respponse => respponse.json())
+        // .then(result=>console.log(result)
+        // .catch(err=>console.log(err)))
+
+        fetch("https://crud.teamrabbil.com/api/v1/CreateProduct", {
+            
+            method: "POST",
+            headers:{'Accept': 'application/json', 'Content-Type':'application/json'},
+            body: JSON.stringify({
+    Img: "https://cdn.ostad.app/course/photo/2025-01-23T12-32-14.452Z-Untitled-1%20(1)%20(1).jpg",
+    ProductCode: "2025-01-23-001",
+    ProductName: "Premium Course Image",
+    Qty: "1",
+    TotalPrice: "$99",
+    UnitPrice: "$99",
+            })
+            
+        })
+        .then(res=>res.json())
+        .then(res=>console.log(res))
+        .catch(err=>console.log(err))
+
+    }
+</script>

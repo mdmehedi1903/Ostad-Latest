@@ -1,0 +1,24 @@
+<input id="myInput"/>
+</br>
+</br>
+
+<button onclick="AddItem()"> Add Item</button>
+<ol id="myItems">
+    </ol>
+
+</br>
+</br>
+
+
+<script>
+    function AddItem(){
+        let valuePick = document.getElementById('myInput').value;
+        let addLi = document.createElement('li');
+
+        addLi.innerHTML = valuePick;
+
+        let myItems = document.getElementById('myItems');
+        myItems.appendChild(addLi)
+       
+    }
+</script>

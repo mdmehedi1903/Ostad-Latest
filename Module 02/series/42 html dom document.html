@@ -1,0 +1,67 @@
+<!-- <p>
+</p>
+
+<title> HI </title>
+
+<button onclick="Demo()">Click</button>
+<button onclick="openWrite()">Click</button>
+
+<script>
+
+
+    function Demo(){
+        // var info = document.cookie;
+        // var info = document.domain;
+        // var info = document.lastModified;
+        // var info = document.title;
+        var info = document.URL;
+        document.getElementsByTagName('p')[0].innerHTML = info;
+    }
+
+
+    function openWrite(){
+        document.open('type/html','replace');
+        document.write("<h1> This is new Document!</h1>")
+        document.close()
+    }
+
+
+</script> -->
+
+
+
+
+
+
+
+
+
+
+<title>DOM Document</title>
+
+<button onclick="replaceNow()"> Window Replace </button></br>
+<h1>I am old heading </h1>
+<script>
+
+  let domDocument = [
+      'document.cookie',
+      'document.URL',
+      'document.domain',
+      'document.lastModified',
+      'document.title',
+      'window.location.href',
+  ]
+
+  for(i=0;i<domDocument.length;i++){
+  document.write(domDocument[i].replace("document.", " ").toLocaleUpperCase()+'========> '+eval(domDocument[i])+'</br>')
+  }
+
+
+  function replaceNow(){
+      document.open('type/html', 'replace')
+  document.write('  <title>New Title</title><h1>I am new heading </h1>')
+  document.close()
+  }
+
+
+</script>

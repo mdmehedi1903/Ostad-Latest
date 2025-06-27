@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body onload="MyEvent('Load Hoyses')">
+    <input onchange="MyEvent('Change hoyese')"/>
+    <input onkeydown="MyEvent('key down hoyese')"/>
+    <input onkeyup="MyEvent('key up hoyese')"/>
+    <script>
+        function MyEvent(msg){
+            console.log(msg)
+        }
+    </script>
+</body>
+</html>

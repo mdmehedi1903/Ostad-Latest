@@ -1,0 +1,32 @@
+<button onclick="getRequest()">Click Me </button>
+<script>
+    function getRequest(){
+        // var URL = "https://crud.teamrabbil.com/api/v1/ReadProduct";
+        // var configurationName = {method: "GET"}
+
+
+        // fetch(URL, configurationName)
+        // .then(respponse => respponse.json())
+        // .then(result=>console.log(result)
+        // .catch(err=>console.log(err)))
+
+        fetch("https://crud.teamrabbil.com/api/v1/CreateProduct", {
+            
+            method: "POST",
+            headers:{'Accept': 'application/json', 'Content-Type':'application/json'},
+            body: JSON.stringify({
+                Img: "MyImg.jpg",
+                ProductCode: "MyImg.jpg",
+                ProductName: "MyImg.jpg",
+                Qty: "MyImg.jpg",
+                TotalPrice: "MyImg.jpg",
+                UnitPrice: "MyImg.jpg",
+            })
+            
+        })
+        .then(res=>res.json())
+        .then(res=>console.log(res))
+        .catch(err=>console.log(err))
+
+    }
+</script>

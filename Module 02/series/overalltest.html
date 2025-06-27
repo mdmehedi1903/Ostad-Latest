@@ -1,0 +1,212 @@
+<button onclick="myBTN(event)">Button </button>
+
+<script>
+    function myBTN(e){
+        console.log(e)
+    }
+ </script> 
+
+
+<!-- // ----------- 35 -------------//-->
+
+<!-- <input/>
+</br>
+<button onclick="myFun()"> Change </button>
+<ul></ul>
+
+    
+ <script>
+
+    
+    function myFun(){
+        let getUL = document.getElementsByTagName('ul')[0];
+    let getInputValue = document.getElementsByTagName('input')[0].value;
+    let addElements = document.createElement('li');
+
+    addElements.innerHTML = getInputValue;
+
+    getUL.appendChild(addElements)
+
+    }
+
+ </script>  -->
+
+
+
+
+<!-- // ----------- 35 -------------//
+ <script>
+ </script> -->
+<!-- // ----------- 35 -------------//-->
+ <!-- <input/>
+ <input/>
+ <h1>0<h1>
+ <button onclick="mySum()">Addition </button>
+ <button onclick="getZero()">Reset </button>
+
+ <script>
+ let myResult = document.getElementsByTagName('h1')[0];
+function mySum(){
+    let result = parseInt(document.getElementsByTagName('input')[0].value)+parseInt(document.getElementsByTagName('input')[1].value);
+    myResult.innerHTML = result;
+}
+
+function getZero(){
+    myResult.innerHTML = 0;
+}
+    
+ </script>  -->
+  
+ 
+ 
+ <!-- // ----------- 35 -------------// --> 
+  <!-- <button onclick="myBTN()">My Button </button>
+
+ <script>
+    function myBTN(){
+        let myWin = window.open()
+        myWin.document.open();
+        myWin.document.write("<h1>Hi I'm new heading!</h1>")
+        myWin.document.close();
+    }  
+ </script> -->
+
+
+
+
+<!-- // ----------- 35 -------------//
+ <script>
+ </script> -->
+ 
+ 
+ <!-- // ----------- 35 -------------// -->
+  <!-- <title>DOM Document</title>
+
+  <button onclick="replaceNow()"> Window Replace </button></br>
+  <h1>I am old heading </h1>
+ <script>
+
+    let domDocument = [
+        'document.cookie',
+        'document.URL',
+        'document.domain',
+        'document.lastModified',
+        'document.title',
+        'window.location.href',
+    ]
+
+    for(i=0;i<domDocument.length;i++){
+    document.write(domDocument[i].replace("document.", " ").toLocaleUpperCase()+'========> '+eval(domDocument[i])+'</br>')
+    }
+
+
+    function replaceNow(){
+        document.open('type/html', 'replace')
+    document.write('  <title>New Title</title><h1>I am new heading </h1>')
+    document.close()
+    }
+
+
+ </script> -->
+
+
+<!-- // ----------- 35 -------------//-->
+
+ <!-- <button onclick="myChange('onclick')">onclick</button>
+ <button onmouseout="myChange('onmouseout')">onmouseout</button>
+ <button onmouseover="myChange('onmouseover')">onmouseover</button>
+<input placeholder="onchange" onchange="myChange('onchange')"/>
+<input placeholder="onkeydown" onkeydown="myChange('onkeydown')"/>
+<input placeholder="onkeyup" onkeyup="myChange('onkeyup')"/>
+ <h2></h2>
+ <script>
+    function myChange(changeDone){
+        document.getElementsByTagName('h2')[0].innerHTML = changeDone;
+        console.log(changeDone)
+    }
+ </script> 
+ -->
+
+
+ <!-- // ----------- 35 -------------//
+ <script>
+ </script> -->
+
+
+<!-- // ----------- 35 -------------//
+ <script>
+    navigator.geolocation.getCurrentPosition((mypos)=> {
+        let longitude = mypos.coords.longitude;
+        let latitude = mypos.coords.latitude;
+
+        document.write(longitude+' '+latitude)
+    })
+
+    
+ </script> -->
+
+<!-- // ----------- 366 -------------// -->
+ <!-- <script>
+
+let myNavigate = [
+    "navigator.appCodeName",
+    "navigator.appName",
+    "navigator.appVersion",
+    "navigator.cookieEnabled",
+    "navigator.language",
+    "navigator.onLine",
+    "navigator.userAgent",
+    "navigator.platform",
+]
+
+for(i=0;i<myNavigate.length;i++){
+    document.write(myNavigate[i].replace("navigator.", " ")+'========> '+eval(myNavigate[i])+'</br>')
+}
+ </script> -->
+
+
+
+
+
+
+<!-- // ----------- 35 -------------//
+ <script>
+ </script> -->
+
+<!-- <button onclick="myPromt()">Alert </button>
+<button onclick="myAlert()">myAlert </button>
+<button onclick="myConfirm()">myConfirm </button>
+<button onclick="setOut()">setTimeout</button>
+<button onclick="myOpen('https://google.com')">myOpen</button>
+<h1> </h1>
+
+<script>
+
+let myHeading = document.getElementsByTagName('h1')[0];
+
+    function myPromt(){
+        let result = prompt("Write somwthing");
+        myHeading.innerHTML = result;
+    }
+
+
+    function myAlert(){
+        alert("Write somwthing");
+    }
+
+    function myConfirm(){
+        myHeading.innerHTML = confirm("Are u agree?");
+    }
+    function setOut(){
+        setTimeout(()=> {
+            myHeading.innerHTML = "I'm set timeout showing after 5 seconds"
+        }, 5000)
+    }
+
+    function myOpen(URL){
+        open(URL)
+        close()
+    }
+        
+
+</script> -->

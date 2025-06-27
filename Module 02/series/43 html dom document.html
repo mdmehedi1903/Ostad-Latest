@@ -1,0 +1,26 @@
+<button onclick="myOpen()">Click Me</button>
+
+<p>Hi  How are you? </p>
+<p>Hi  How are you? </p>
+<p>Hi  How are you? </p>
+<p>Hi  How are you? </p>
+<p>Hi  How are you? </p>
+<p>Hi  How are you? </p>
+<p>Hi  How are you? </p>
+<p>Hi  How are you? </p>
+<p>Hi  How are you? </p>
+
+<script>
+
+function myOpen(){
+    let w = window.open();
+    w.document.open();
+    w.document.write("<h1>How are you?</h1>")
+    w.document.close()
+}
+
+    let finder = document.getElementsByTagName('p').length;
+    document.write(finder)
+
+
+</script>
