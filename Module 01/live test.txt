@@ -1,0 +1,51 @@
+function convertTosecond(input){
+    return input * 60; 
+}
+
+console.log(convertTosecond(5))
+
+
+
+function convertText(flag) {
+    return flag.toString();
+}
+
+
+console.log(convertText(true)); 
+console.log(convertText(false)); 
+
+
+
+function lessThanZero(zero) {
+    return zero <= 0;
+}
+
+console.log(lessThanZero(3)); 
+console.log(lessThanZero(0)); 
+
+let myAarray =  [34, 15, 88, 2] ;
+
+function chotoNumber(arr) {
+    return Math.min(...arr);
+}
+
+console.log(chotoNumber([34, 15, 88, 2])); 
+console.log(chotoNumber([34, -345, -1, 100]));
+
+function lastValue(arr) {
+    return arr[arr.length - 1];
+}
+
+
+console.log(lastValue([41, 52, 5,3,34,3])+'<br>');
+console.log(lastValue(["Mehedi", "Rakib", "Sujon"])); 
+
+
+
+
+
+
+
+
+
+
