@@ -1,0 +1,79 @@
+// // Task 4: D
+// // ==============================
+// const express = require('express');
+// const app = express();
+
+// app.get('/', (req, res) => {
+//   res.clearCookie('username', 'JohnDoe');
+//   res.clearCookie('language', 'en');
+  
+//   res.send('Cookies clear done');
+// });
+
+// app.listen(3000, () => {
+//   console.log(`Server is listening on port 3000`);
+// });
+
+
+
+
+// // Task 3: C
+// // ==============================
+// const express = require('express');
+// const app = express();
+
+// app.get('/', (req, res) => {
+//   res.cookie('username', 'JohnDoe');
+//   res.cookie('language', 'en');
+  
+//   res.send('Cookies set done');
+// });
+
+// app.listen(3000, () => {
+//   console.log(`Server is listening on port 3000`);
+// });
+
+
+
+
+// // Task 2: B
+// // ==============================
+// const express = require('express');
+// const app = express();
+
+// app.get('/success', (req,res)=> {
+//     res.status(200).send("Hello, Express JS!")
+// })
+// app.get('/notfound', (req,res)=> {
+//     res.status(404).send("No Found")
+// })
+
+// app.listen(3000, ()=>{
+//     console.log("Running!")
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+// // Task 1: A
+// // ==============================
+// const express = require('express');
+// const app = express();
+
+
+// app.get('/data', (req,res)=> {
+//     res.send("Hello, Express JS!")
+// })
+
+
+// app.listen(3000, ()=>{
+//     console.log("Running!")
+// })
