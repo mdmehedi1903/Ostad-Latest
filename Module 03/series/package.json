@@ -1,0 +1,15 @@
+{
+  "name": "series",
+  "version": "1.0.0",
+  "main": "2. First JS6 Program hello world.js",
+  "scripts": {
+    "test": "nodemon main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

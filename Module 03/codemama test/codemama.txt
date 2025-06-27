@@ -1,0 +1,50 @@
+function main(input){
+    return input*(9/5)+32;
+}
+console.log(`The temperature in Fahrenheit is: ${main(50).toFixed(2)}`)
+
+
+
+
+function main(input) {
+    /**
+     * Write JavaScript code from here
+     */
+
+    var [a, b, c] = input.split(" ").map(Number); 
+    var maximum = Math.max(a, b, c);
+    console.log(maximum);
+}
+
+
+
+
+
+
+function main(input){
+    let [a,b,c] = input.split(" ").map(Number)
+    let result = (a+b+c)/3;
+
+    console.log('Average: '+ result.toFixed(2));
+}
+
+
+main("23 44 55")
+
+
+
+
+
+
+function main(input) {
+
+    var convertToString = parseFloat(input).toFixed(2); 
+    var bonus = convertToString * 0.1; 
+    console.log(Math.floor(bonus));
+}
+main(5000)
+
+
+
+
+
