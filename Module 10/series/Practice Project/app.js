@@ -54,7 +54,7 @@ const DATABASE_NAME = process.env.DATABASE_NAME;
 const DATABASE = `${process.env.DATABASE}/${DATABASE_NAME}`; 
 
 mongoose
-    .connect(DATABASE)
+    .connect(DATABASE, {autoIndex: true})
     .then(() => console.log(`DB Connected at : ${DATABASE_NAME}`))
     .catch((err) => {
         console.error(err);
