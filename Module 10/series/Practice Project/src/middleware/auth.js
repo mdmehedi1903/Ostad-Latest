@@ -6,9 +6,9 @@ module.exports = (req,res,next)=> {
         if(err){
             res.status(401).json({status: "Please login first!", Token})
         }else{
-            let UserId = VerifiedToken['data']
-            req.headers.UserId = UserId;
-            console.log(UserId)
+            let TokenData = VerifiedToken['data'][0]
+            req.headers.TokenData = TokenData;
+            console.log(TokenData)
             next()
         }
     })

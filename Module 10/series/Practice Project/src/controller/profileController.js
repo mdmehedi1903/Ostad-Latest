@@ -33,7 +33,7 @@ exports.LoginUser = async(req,res)=> {
 
                 let Payload={
                     exp:Math.floor(Date.now()/1000)+(24*60*60),
-                    data: User[0]._id
+                    data: User
                 }
 
                 let Token = jwt.sign(Payload, "Secret-XYZ-123")
@@ -54,9 +54,9 @@ exports.LoginUser = async(req,res)=> {
 
 exports.ReadProfile = async (req,res)=> {
     try{
-        let UserId = req.headers['UserId']
+        let {_id} = req.headers['TokenData']
         let Projection = "UserName FirstName LastName EmailAddress MobileNumber City";
-        let Profile = await ProfileModel.find({_id: UserId}, Projection)
+        let Profile = await ProfileModel.find({_id: _id}, Projection)
             if(Profile.length==0){
                 res.status(401).json({status: "User No Longer Exists!"}) 
             }else{
@@ -72,14 +72,14 @@ exports.ReadProfile = async (req,res)=> {
 
 exports.UpdateProfile = async (req,res)=> {
     try{
-        let UserId = req.headers['UserId']
+        let {_id} = req.headers['TokenData']
         let plainPassword = req.body['Password'];
         let Password = await hashPassword(plainPassword);
         let reqBody = req.body;
         reqBody['Password'] = Password;
 
 
-        let Result = await ProfileModel.updateOne({_id: UserId}, reqBody)
+        let Result = await ProfileModel.updateOne({_id: _id}, reqBody)
         res.status(201).json({status: "Success!", Result})
     }catch(err){
        res.status(401).json({status: "Failed!", data: err}) 
@@ -91,8 +91,8 @@ exports.UpdateProfile = async (req,res)=> {
 
 exports.DeleteUser = async(req,res)=> {
     try{
-        let UserId = req.headers['UserId']
-        let Result = await ProfileModel.deleteOne({_id: UserId});
+        let _id = req.headers['TokenData']
+        let Result = await ProfileModel.deleteOne({_id: _id});
         res.status(201).json({status: "Success!", Result})
     }catch(err){
         res.status(401).json({status: "Delete Failed!", data: err}) 
