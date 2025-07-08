@@ -122,6 +122,7 @@ exports.VerifyOTP = async(req,res)=> {
 }
 
 
+
 exports.RecoverPassword = async (req,res)=> {
     try{
         let {email, password, otp} = req.body;
