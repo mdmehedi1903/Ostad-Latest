@@ -1,0 +1,56 @@
+const productModel = require('../Models/productModel');
+
+exports.createProduct = async (req, res) => {
+    const reqBody = req.body;
+  
+    try {
+      const data = await productModel.create(reqBody);
+      res.status(201).json({ status: "Success", data });
+    } catch (err) {
+      res.status(400).json({ status: "Failed", data: err });
+    }
+  };
+  
+
+
+
+  exports.readProduct = async (req, res) => {
+    try {
+      let id = req.params.id;
+      let Query = { _id: id };
+      const data = await productModel.find(Query);
+  
+      res.status(200).json({ status: "Success", data: data });
+    } catch (err) {
+      res.status(400).json({ status: "Failed", error: err.message });
+    }
+  }
+  
+
+
+  exports.deleteProduct = async (req, res) => {
+    try {
+      let id = req.params.id;
+      let Query = { _id: id };
+      const data = await productModel.deleteOne(Query);
+  
+      res.status(200).json({ status: "Success", data: data });
+    } catch (err) {
+      res.status(400).json({ status: "Failed", error: err.message });
+    }
+  }
+  
+
+
+  exports.updateProduct = async (req, res) => {
+    try {
+      let id = req.params.id;
+      let reqBody = req.body;
+      let Query = { _id: id };
+      const data = await productModel.updateOne(Query, reqBody);
+  
+      res.status(200).json({ status: "Success", data: data });
+    } catch (err) {
+      res.status(400).json({ status: "Failed", error: err.message });
+    }
+  }

@@ -1,0 +1,23 @@
+{
+  "name": "ostad-latest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdmehedi1903/Ostad-Latest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdmehedi1903/Ostad-Latest/issues"
+  },
+  "homepage": "https://github.com/mdmehedi1903/Ostad-Latest#readme",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

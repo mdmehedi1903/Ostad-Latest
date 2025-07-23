@@ -1,0 +1,51 @@
+<script>
+    function main(input){
+        let [inputOne, inputTwo] = input.split(' ');
+        const result = Math.pow(parseInt(inputOne), parseInt(inputTwo));
+        console.log(result);
+    }
+    main("2 2")
+</script>
+
+
+<script>
+    function isPrime(number) {
+    if (number <= 1) {
+      return false;
+    }
+    for (let i = 2; i < number; i++) {
+      if (number % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+  
+  function main(input) {
+    const number = parseInt(input);
+  
+    if (isPrime(number)) {
+      console.log(number + " is a prime number.");
+    } else {
+      console.log(number + " is not a prime number.");
+    }
+  }
+</script>
+
+
+<script>
+function main(input){
+    let [number1, number2] = input.split(' ')
+    let gcd = 1;
+
+for (let i = 1; i <= number1 && i <= number2; i++) {
+  if (number1 % i === 0 && number2 % i === 0) {
+    gcd = i;
+  }
+}
+
+console.log(gcd);
+}
+
+main("6 18")
+</script>
