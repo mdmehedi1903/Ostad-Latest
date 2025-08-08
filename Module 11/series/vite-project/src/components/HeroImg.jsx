@@ -1,13 +1,11 @@
 import React from 'react';
-import HeroImg from './HeroImg';
 
-const Hero = (props) => {
+const HeroImg = () => {
     return (
         <div>
-            <h1>{props.title}</h1>
             <img src="https://wpsmarket.com/wp-content/uploads/2024/10/WPS-Market-Square-Logo.jpg" alt="" />
         </div>
     );
 };
 
-export default Hero;
+export default HeroImg;

@@ -1,8 +1,9 @@
 
 import { Fragment } from 'react';
+import Hero from './components/Hero';
 
 const App = () => {
-// ******************* // Start First Return
+// ******************* // Start 
 
     // let marks = 90;
     // // const city = ["Dhaka", "London", "Kolkata"]
@@ -57,9 +58,11 @@ const App = () => {
     //   //***************** */
     // );
 
-  // ******************* // End First Return
+  // ******************* // End
 
-  // ******************* // Start Second Return
+
+
+  // ******************* // Start
     // const status = true;
     // if(status==false){
     // return(
@@ -76,25 +79,116 @@ const App = () => {
     //     </div>
     //   );
     // }
-  // ******************* // End Second Return
+  // ******************* // End
 
 
-  // ******************* // Start Third Return
-  const loginStatus = (status)=> {
-    if(status){
-      return <button>Logout Button</button>
-    }else{
-      return <button>Login Button</button>
-    }
-  }
+  // ******************* // Start
+  // //Conditional Rendering using if else
+  // const loginStatus = (status)=> {
+  //   if(status){
+  //     return <button>Logout Button</button>
+  //   }else{
+  //     return <button>Login Button</button>
+  //   }
+  // }
 
-  return(
-    <div>
-      <h1>Login Status</h1>
-      {loginStatus(true)}
-    </div>
-  )
-  // ******************* // End Third Return
+  // return(
+  //   <div>
+  //     <h1>Login Status</h1>
+  //     {loginStatus(false)}
+  //   </div>
+  // )
+  // ******************* // End 
+
+
+// ******************* // Start 
+  // //Conditional Rendering using Switch Case
+  // const status = false;
+  // switch(status){
+  //   case true:
+  //     return <button>Logout Button</button>
+  //   case false: 
+  //     return <button>Login Btn</button>
+
+  //   default: 
+  //     return null;
+  // }
+
+  // ******************* // End
+
+
+  // ******************* // Start
+
+    // // Conditional rendering using ternary operator
+    //   let status = true;
+    //   return(
+    //     <>
+    //       {
+    //         status?
+    //           <button>Logout</button>
+    //         : <button>Login</button>
+    //       }
+    //     </>
+    //   )
+
+
+
+
+  // ******************* // Start
+  
+  // // logical && 
+  // let status = true;
+  //   return(
+  //     <> <h1>Login Status</h1>
+  //       {status && <button>Logout</button>}
+  //     </>
+  //   )
+
+
+  // ******************* // Start
+
+  // // Conditional rendering using IIUF
+  // let status = false;
+  //   return(
+  //     <>
+  //         <h1>Login Status</h1>
+  //         {
+  //           (()=> {
+  //             if(status){
+  //               return <button>Logout</button>
+  //             }else{
+  //               return <button>Login</button>
+  //             }
+  //           })()
+  //         }
+  //     </>
+  //   )
+
+  // ******************* // End 
+
+
+
+
+  // ******************* // Start
+    // Props
+      return(
+        <>
+          <Hero title="Learn React"/>
+        </>
+      );
+
+  // ******************* // End 
+
+
+
+
+  // ******************* // Start
+    
+    // Name of Tutorial
+
+  // ******************* // End 
+
+
 };
 
 export default App;
